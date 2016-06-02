@@ -41,6 +41,9 @@
                                             <constraint firstAttribute="height" constant="30" id="xQV-zm-vFc"/>
                                         </constraints>
                                         <state key="normal" title="Add"/>
+                                        <connections>
+                                            <action selector="onAddButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gQk-cW-L2g"/>
+                                        </connections>
                                     </button>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="New monster description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="by2-Wv-Nq2">
                                         <rect key="frame" x="8" y="45" width="183.5" height="30"/>
@@ -99,6 +102,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="MCMS" id="Ekj-bZ-2Tb"/>
+                    <connections>
+                        <outlet property="descriptionTextField" destination="by2-Wv-Nq2" id="fn1-9g-C3u"/>
+                        <outlet property="nameTextField" destination="lmr-is-Wqr" id="z4C-g6-npn"/>
+                        <outlet property="tableView" destination="xnY-UM-JHl" id="yzF-Io-8GM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

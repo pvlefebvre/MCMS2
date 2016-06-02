@@ -11,6 +11,9 @@
 
 @interface ViewController () <UITableViewDelegate,UITableViewDataSource>
 @property NSMutableArray *creatures;
+@property (weak, nonatomic) IBOutlet UITextField *nameTextField;
+@property (weak, nonatomic) IBOutlet UITextField *descriptionTextField;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 @end
 
 @implementation ViewController
@@ -34,6 +37,14 @@
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return self.creatures.count;
+}
+- (IBAction)onAddButtonPressed:(id)sender {
+    MagicalCreature *creature = [[MagicalCreature alloc] initWithName:self.nameTextField.text creatureDescription:self.descriptionTextField.text andImage:@"monster4"];
+    [self.creatures addObject:creature];
+    [self.tableView reloadData];
+    self.nameTextField.text = @"";
+    self.descriptionTextField.text = @"";
+    
 }
 
 
