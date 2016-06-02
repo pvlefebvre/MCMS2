@@ -192,12 +192,21 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fWn-jg-nuH">
+                                <rect key="frame" x="180" y="257" width="240" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="owD-5Z-5Tn"/>
+                                    <constraint firstAttribute="height" constant="200" id="zi0-qM-aX5"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="vDi-ZP-dRQ" firstAttribute="leading" secondItem="Byc-df-ULQ" secondAttribute="leading" id="9JO-TZ-0aE"/>
                             <constraint firstItem="Jim-H3-iiH" firstAttribute="top" secondItem="gdV-DX-tNw" secondAttribute="bottom" id="9OA-gE-sL2"/>
                             <constraint firstItem="rZf-wf-1Z9" firstAttribute="centerX" secondItem="Byc-df-ULQ" secondAttribute="centerX" id="BZb-qJ-c6f"/>
+                            <constraint firstItem="fWn-jg-nuH" firstAttribute="top" secondItem="nDI-rZ-d9W" secondAttribute="bottom" constant="66" id="DWE-c1-Glj"/>
+                            <constraint firstItem="fWn-jg-nuH" firstAttribute="centerX" secondItem="Byc-df-ULQ" secondAttribute="centerX" id="EFp-yO-BcK"/>
                             <constraint firstItem="yhF-6j-boB" firstAttribute="top" secondItem="rZf-wf-1Z9" secondAttribute="bottom" constant="50" id="H1y-GL-ORc"/>
                             <constraint firstItem="Jim-H3-iiH" firstAttribute="centerX" secondItem="Byc-df-ULQ" secondAttribute="centerX" id="OXc-qb-x0N"/>
                             <constraint firstItem="rZf-wf-1Z9" firstAttribute="top" secondItem="gdV-DX-tNw" secondAttribute="bottom" constant="21" id="TUG-a3-7UV"/>
@@ -215,6 +224,7 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="creatureImageView" destination="fWn-jg-nuH" id="Mij-yR-0ZV"/>
                         <outlet property="descriptionLabel" destination="yhF-6j-boB" id="VqE-Z4-wt0"/>
                         <outlet property="descriptionTextField" destination="nDI-rZ-d9W" id="L05-fk-2dy"/>
                         <outlet property="nameLabel" destination="Jim-H3-iiH" id="P3h-L2-6xr"/>

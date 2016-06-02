@@ -13,6 +13,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *descriptionTextField;
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *descriptionLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *creatureImageView;
 
 @end
 
@@ -22,6 +23,7 @@
     [super viewDidLoad];
     self.nameLabel.text = self.creature.name;
     self.descriptionLabel.text = self.creature.creatureDescription;
+    self.creatureImageView.image = [UIImage imageNamed:self.creature.creatureImageName];
     
 }
 
