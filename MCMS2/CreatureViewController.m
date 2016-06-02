@@ -20,7 +20,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSLog(@"%p",self.creature);
     self.nameLabel.text = self.creature.name;
     self.descriptionLabel.text = self.creature.creatureDescription;
     

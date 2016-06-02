@@ -36,6 +36,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CellID"];
     MagicalCreature *creature = [self.creatures objectAtIndex:indexPath.row];
     cell.textLabel.text = creature.name;
+    cell.detailTextLabel.text = creature.creatureDescription;
     return cell;
 }
 
@@ -54,7 +55,6 @@
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     CreatureViewController *dvc = segue.destinationViewController;
     NSIndexPath *path = [self.tableView indexPathForSelectedRow];
-    NSLog(@"%p",[self.creatures objectAtIndex:path.row]);
     dvc.creature = [self.creatures objectAtIndex:path.row];
 }
 
