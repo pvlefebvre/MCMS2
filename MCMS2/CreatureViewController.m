@@ -8,12 +8,13 @@
 
 #import "CreatureViewController.h"
 
-@interface CreatureViewController ()
+@interface CreatureViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITextField *nameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *descriptionTextField;
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *descriptionLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *creatureImageView;
+@property (weak, nonatomic) IBOutlet UITableView *accessoriesTableView;
 
 @end
 
@@ -53,5 +54,16 @@
         [sender setTitle:@"Done"];
     }
 }
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CellID2"];
+    NSString *accessory = [self.creature.accessories objectAtIndex:indexPath.row];
+    cell.textLabel.text = accessory;
+    return cell;
+}
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return self.creature.accessories.count;
+}
+
 
 @end

@@ -21,9 +21,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    MagicalCreature *creature1 = [[MagicalCreature alloc] initWithName:@"GROG" creatureDescription:@"Big and mean" andImage:@"monster1"];
-    MagicalCreature *creature2 = [[MagicalCreature alloc] initWithName:@"Ick" creatureDescription:@"Big and mean" andImage:@"monster2"];
-    MagicalCreature *creature3 = [[MagicalCreature alloc] initWithName:@"BOB" creatureDescription:@"Big and mean" andImage:@"monster3"];
+    MagicalCreature *creature1 = [[MagicalCreature alloc] initWithName:@"GROG" creatureDescription:@"Big and mean" image:@"monster1" andAccessories:[[NSMutableArray alloc]initWithObjects:@"Claws",@"Axe", nil]];
+    MagicalCreature *creature2 = [[MagicalCreature alloc] initWithName:@"Ick" creatureDescription:@"Big and mean" image:@"monster2" andAccessories:[[NSMutableArray alloc]initWithObjects:@"Claws",@"Axe", nil]];
+    MagicalCreature *creature3 = [[MagicalCreature alloc] initWithName:@"BOB" creatureDescription:@"Big and mean" image:@"monster3" andAccessories:[[NSMutableArray alloc]initWithObjects:@"Claws",@"Axe", nil]];
     
     self.creatures = [[NSMutableArray alloc] initWithObjects:creature1,creature2,creature3, nil];
 
@@ -44,7 +44,7 @@
     return self.creatures.count;
 }
 - (IBAction)onAddButtonPressed:(id)sender {
-    MagicalCreature *creature = [[MagicalCreature alloc] initWithName:self.nameTextField.text creatureDescription:self.descriptionTextField.text andImage:@"monster4"];
+    MagicalCreature *creature = [[MagicalCreature alloc] initWithName:self.nameTextField.text creatureDescription:self.descriptionTextField.text image:@"monster4" andAccessories:[[NSMutableArray alloc]initWithObjects:@"Claws",@"Axe", nil]];
     [self.creatures addObject:creature];
     [self.tableView reloadData];
     self.nameTextField.text = @"";
