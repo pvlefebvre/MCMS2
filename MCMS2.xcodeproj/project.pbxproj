@@ -14,6 +14,7 @@
 		E6E3D5FB1CFFBCD500ABB481 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6E3D5FA1CFFBCD500ABB481 /* Assets.xcassets */; };
 		E6E3D5FE1CFFBCD500ABB481 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6E3D5FC1CFFBCD500ABB481 /* LaunchScreen.storyboard */; };
 		E6E3D6071CFFBD4D00ABB481 /* MagicalCreature.m in Sources */ = {isa = PBXBuildFile; fileRef = E6E3D6061CFFBD4D00ABB481 /* MagicalCreature.m */; };
+		E6E3D60A1CFFC82F00ABB481 /* CreatureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6E3D6091CFFC82F00ABB481 /* CreatureViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,8 @@
 		E6E3D5FF1CFFBCD500ABB481 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E6E3D6051CFFBD4D00ABB481 /* MagicalCreature.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MagicalCreature.h; path = ../MagicalCreature.h; sourceTree = "<group>"; };
 		E6E3D6061CFFBD4D00ABB481 /* MagicalCreature.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MagicalCreature.m; path = ../MagicalCreature.m; sourceTree = "<group>"; };
+		E6E3D6081CFFC82F00ABB481 /* CreatureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreatureViewController.h; sourceTree = "<group>"; };
+		E6E3D6091CFFC82F00ABB481 /* CreatureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreatureViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +75,8 @@
 				E6E3D5FC1CFFBCD500ABB481 /* LaunchScreen.storyboard */,
 				E6E3D5FF1CFFBCD500ABB481 /* Info.plist */,
 				E6E3D5EE1CFFBCD500ABB481 /* Supporting Files */,
+				E6E3D6081CFFC82F00ABB481 /* CreatureViewController.h */,
+				E6E3D6091CFFC82F00ABB481 /* CreatureViewController.m */,
 			);
 			path = MCMS2;
 			sourceTree = "<group>";
@@ -157,6 +162,7 @@
 				E6E3D5F61CFFBCD500ABB481 /* ViewController.m in Sources */,
 				E6E3D6071CFFBD4D00ABB481 /* MagicalCreature.m in Sources */,
 				E6E3D5F31CFFBCD500ABB481 /* AppDelegate.m in Sources */,
+				E6E3D60A1CFFC82F00ABB481 /* CreatureViewController.m in Sources */,
 				E6E3D5F01CFFBCD500ABB481 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

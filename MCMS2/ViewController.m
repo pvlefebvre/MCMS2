@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "MagicalCreature.h"
+#import "CreatureViewController.h"
 
 @interface ViewController () <UITableViewDelegate,UITableViewDataSource>
 @property NSMutableArray *creatures;
@@ -47,5 +48,10 @@
     
 }
 
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    CreatureViewController *dvc = segue.destinationViewController;
+    NSIndexPath *path = [self.tableView indexPathForSelectedRow];
+    dvc.creature = [self.creatures objectAtIndex:path.row];
+}
 
 @end

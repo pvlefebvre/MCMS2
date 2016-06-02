@@ -5,7 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--MCMS-->
+        <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
@@ -82,6 +82,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="hHT-Jn-GKY" kind="show" identifier="ShowCreatureSegue" id="xRF-lO-gaN"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -101,7 +104,7 @@
                             <constraint firstItem="pk1-GN-97e" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="koY-RS-ddv"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="MCMS" id="Ekj-bZ-2Tb"/>
+                    <navigationItem key="navigationItem" id="Ekj-bZ-2Tb"/>
                     <connections>
                         <outlet property="descriptionTextField" destination="by2-Wv-Nq2" id="fn1-9g-C3u"/>
                         <outlet property="nameTextField" destination="lmr-is-Wqr" id="z4C-g6-npn"/>
@@ -111,6 +114,40 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1615" y="345"/>
+        </scene>
+        <!--Creature View Controller-->
+        <scene sceneID="R66-dN-cvg">
+            <objects>
+                <viewController id="hHT-Jn-GKY" customClass="CreatureViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gdV-DX-tNw"/>
+                        <viewControllerLayoutGuide type="bottom" id="7YQ-XA-L1x"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Byc-df-ULQ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cdw-QI-3qb">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="rTT-7Z-TTx"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="Title" id="evx-Lk-6Qc"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cdw-QI-3qb" firstAttribute="top" secondItem="Byc-df-ULQ" secondAttribute="top" constant="20" id="7Zk-aK-ZKe"/>
+                            <constraint firstItem="cdw-QI-3qb" firstAttribute="leading" secondItem="Byc-df-ULQ" secondAttribute="leading" id="HeJ-rS-xNO"/>
+                            <constraint firstAttribute="trailing" secondItem="cdw-QI-3qb" secondAttribute="trailing" id="btX-lS-DF9"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tuY-u0-ueT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2267" y="345"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="BjK-88-B6t">
