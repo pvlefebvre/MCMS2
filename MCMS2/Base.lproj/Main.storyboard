@@ -104,7 +104,7 @@
                             <constraint firstItem="pk1-GN-97e" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="koY-RS-ddv"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Ekj-bZ-2Tb"/>
+                    <navigationItem key="navigationItem" id="4wn-6e-o46"/>
                     <connections>
                         <outlet property="descriptionTextField" destination="by2-Wv-Nq2" id="fn1-9g-C3u"/>
                         <outlet property="nameTextField" destination="lmr-is-Wqr" id="z4C-g6-npn"/>
@@ -127,23 +127,83 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cdw-QI-3qb">
-                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jim-H3-iiH">
+                                <rect key="frame" x="279" y="89" width="42" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="rTT-7Z-TTx"/>
+                                    <constraint firstAttribute="height" constant="21" id="jhA-fG-pKJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yhF-6j-boB">
+                                <rect key="frame" x="279" y="165" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="G9M-jT-Hd4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter new description" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="nDI-rZ-d9W">
+                                <rect key="frame" x="200.5" y="161" width="200" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="aJD-ab-qXr"/>
+                                    <constraint firstAttribute="height" constant="30" id="qYV-7D-x6i"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter new name" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="rZf-wf-1Z9">
+                                <rect key="frame" x="200" y="85" width="200" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="NTw-lY-xCj"/>
+                                    <constraint firstAttribute="height" constant="30" id="uZR-8G-dfS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vDi-ZP-dRQ">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="UxO-qx-V9W"/>
                                 </constraints>
                                 <items>
-                                    <navigationItem title="Title" id="evx-Lk-6Qc"/>
+                                    <barButtonItem title="Edit" id="Wk5-vj-QlU">
+                                        <connections>
+                                            <action selector="onEditButtonPressed:" destination="hHT-Jn-GKY" id="ZXe-L3-Lu6"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
-                            </navigationBar>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="cdw-QI-3qb" firstAttribute="top" secondItem="Byc-df-ULQ" secondAttribute="top" constant="20" id="7Zk-aK-ZKe"/>
-                            <constraint firstItem="cdw-QI-3qb" firstAttribute="leading" secondItem="Byc-df-ULQ" secondAttribute="leading" id="HeJ-rS-xNO"/>
-                            <constraint firstAttribute="trailing" secondItem="cdw-QI-3qb" secondAttribute="trailing" id="btX-lS-DF9"/>
+                            <constraint firstItem="vDi-ZP-dRQ" firstAttribute="leading" secondItem="Byc-df-ULQ" secondAttribute="leading" id="9JO-TZ-0aE"/>
+                            <constraint firstItem="Jim-H3-iiH" firstAttribute="top" secondItem="gdV-DX-tNw" secondAttribute="bottom" id="9OA-gE-sL2"/>
+                            <constraint firstItem="rZf-wf-1Z9" firstAttribute="centerX" secondItem="Byc-df-ULQ" secondAttribute="centerX" id="BZb-qJ-c6f"/>
+                            <constraint firstItem="yhF-6j-boB" firstAttribute="top" secondItem="rZf-wf-1Z9" secondAttribute="bottom" constant="50" id="H1y-GL-ORc"/>
+                            <constraint firstItem="Jim-H3-iiH" firstAttribute="centerX" secondItem="Byc-df-ULQ" secondAttribute="centerX" id="OXc-qb-x0N"/>
+                            <constraint firstItem="rZf-wf-1Z9" firstAttribute="top" secondItem="gdV-DX-tNw" secondAttribute="bottom" constant="21" id="TUG-a3-7UV"/>
+                            <constraint firstAttribute="trailing" secondItem="vDi-ZP-dRQ" secondAttribute="trailing" id="bSJ-Ea-2Hw"/>
+                            <constraint firstItem="Jim-H3-iiH" firstAttribute="top" secondItem="gdV-DX-tNw" secondAttribute="bottom" constant="25" id="k3F-6q-LHl"/>
+                            <constraint firstItem="nDI-rZ-d9W" firstAttribute="centerX" secondItem="Byc-df-ULQ" secondAttribute="centerX" id="sby-xZ-NQn"/>
+                            <constraint firstItem="nDI-rZ-d9W" firstAttribute="top" secondItem="rZf-wf-1Z9" secondAttribute="bottom" constant="46" id="xna-u5-CkC"/>
+                            <constraint firstItem="yhF-6j-boB" firstAttribute="centerX" secondItem="Byc-df-ULQ" secondAttribute="centerX" id="zJR-E6-7yb"/>
+                            <constraint firstItem="7YQ-XA-L1x" firstAttribute="top" secondItem="vDi-ZP-dRQ" secondAttribute="bottom" id="zRJ-fH-vhD"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="9OA-gE-sL2"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="yhF-6j-boB" id="VqE-Z4-wt0"/>
+                        <outlet property="descriptionTextField" destination="nDI-rZ-d9W" id="L05-fk-2dy"/>
+                        <outlet property="nameLabel" destination="Jim-H3-iiH" id="P3h-L2-6xr"/>
+                        <outlet property="nameTextField" destination="rZf-wf-1Z9" id="2cc-89-sfk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tuY-u0-ueT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

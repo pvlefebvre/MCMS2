@@ -70,13 +70,13 @@
 				E6E3D5F21CFFBCD500ABB481 /* AppDelegate.m */,
 				E6E3D5F41CFFBCD500ABB481 /* ViewController.h */,
 				E6E3D5F51CFFBCD500ABB481 /* ViewController.m */,
+				E6E3D6081CFFC82F00ABB481 /* CreatureViewController.h */,
+				E6E3D6091CFFC82F00ABB481 /* CreatureViewController.m */,
 				E6E3D5F71CFFBCD500ABB481 /* Main.storyboard */,
 				E6E3D5FA1CFFBCD500ABB481 /* Assets.xcassets */,
 				E6E3D5FC1CFFBCD500ABB481 /* LaunchScreen.storyboard */,
 				E6E3D5FF1CFFBCD500ABB481 /* Info.plist */,
 				E6E3D5EE1CFFBCD500ABB481 /* Supporting Files */,
-				E6E3D6081CFFC82F00ABB481 /* CreatureViewController.h */,
-				E6E3D6091CFFC82F00ABB481 /* CreatureViewController.m */,
 			);
 			path = MCMS2;
 			sourceTree = "<group>";

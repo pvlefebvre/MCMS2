@@ -28,6 +28,9 @@
     self.creatures = [[NSMutableArray alloc] initWithObjects:creature1,creature2,creature3, nil];
 
 }
+-(void)viewWillAppear:(BOOL)animated{
+    [self.tableView reloadData];
+}
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CellID"];
@@ -51,6 +54,7 @@
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     CreatureViewController *dvc = segue.destinationViewController;
     NSIndexPath *path = [self.tableView indexPathForSelectedRow];
+    NSLog(@"%p",[self.creatures objectAtIndex:path.row]);
     dvc.creature = [self.creatures objectAtIndex:path.row];
 }
 

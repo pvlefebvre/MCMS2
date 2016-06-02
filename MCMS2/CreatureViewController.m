@@ -9,6 +9,10 @@
 #import "CreatureViewController.h"
 
 @interface CreatureViewController ()
+@property (weak, nonatomic) IBOutlet UITextField *nameTextField;
+@property (weak, nonatomic) IBOutlet UITextField *descriptionTextField;
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *descriptionLabel;
 
 @end
 
@@ -16,8 +20,37 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = self.creature.name;
+    NSLog(@"%p",self.creature);
+    self.nameLabel.text = self.creature.name;
+    self.descriptionLabel.text = self.creature.creatureDescription;
+    
 }
 
+- (IBAction)onEditButtonPressed:(UIBarButtonItem *)sender {
+    if (self.editing) {
+        self.editing = false;
+        //[self.tableView setEditing:false animated:true];
+        self.nameLabel.text = self.nameTextField.text;
+        self.descriptionLabel.text = self.descriptionTextField.text;
+        
+        self.creature.name = self.nameLabel.text;
+        self.creature.creatureDescription = self.descriptionLabel.text;
+        
+        self.nameTextField.hidden = YES;
+        self.descriptionTextField.hidden = YES;
+        
+        [sender setStyle:UIBarButtonItemStylePlain];
+        [sender setTitle:@"Edit"];
+    } else {
+        self.editing = true;
+        //[self.tableView setEditing:true animated:true];
+        self.nameTextField.text = self.nameLabel.text;
+        self.descriptionTextField.text = self.descriptionLabel.text;
+        self.nameTextField.hidden = NO;
+        self.descriptionTextField.hidden = NO;
+        [sender setStyle:UIBarButtonItemStyleDone];
+        [sender setTitle:@"Done"];
+    }
+}
 
 @end
