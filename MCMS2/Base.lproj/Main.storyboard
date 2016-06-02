@@ -19,14 +19,72 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pk1-GN-97e">
                                 <rect key="frame" x="0.0" y="64" width="600" height="75"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="New monster name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lmr-is-Wqr">
+                                        <rect key="frame" x="8" y="8" width="146" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="400" id="1tH-ga-2jT"/>
+                                            <constraint firstAttribute="height" constant="30" id="dpD-Fh-OMj"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="1tH-ga-2jT"/>
+                                            </mask>
+                                        </variation>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FmI-0Y-kX0">
+                                        <rect key="frame" x="546" y="8" width="46" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="46" id="Gx3-cu-O8V"/>
+                                            <constraint firstAttribute="height" constant="30" id="xQV-zm-vFc"/>
+                                        </constraints>
+                                        <state key="normal" title="Add"/>
+                                    </button>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="New monster description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="by2-Wv-Nq2">
+                                        <rect key="frame" x="8" y="45" width="183.5" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="GkG-nA-oUn"/>
+                                            <constraint firstAttribute="width" constant="400" id="cR7-iP-Cb5"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="cR7-iP-Cb5"/>
+                                            </mask>
+                                        </variation>
+                                    </textField>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstItem="lmr-is-Wqr" firstAttribute="top" secondItem="pk1-GN-97e" secondAttribute="top" constant="8" id="P8l-6F-JME"/>
+                                    <constraint firstAttribute="trailing" secondItem="FmI-0Y-kX0" secondAttribute="trailing" constant="8" id="csK-zt-0e7"/>
+                                    <constraint firstItem="lmr-is-Wqr" firstAttribute="leading" secondItem="pk1-GN-97e" secondAttribute="leading" constant="8" id="fVH-aH-Xxk"/>
+                                    <constraint firstItem="by2-Wv-Nq2" firstAttribute="leading" secondItem="pk1-GN-97e" secondAttribute="leading" constant="8" id="mQJ-zm-bWe"/>
+                                    <constraint firstItem="FmI-0Y-kX0" firstAttribute="top" secondItem="pk1-GN-97e" secondAttribute="top" constant="8" id="qS3-Rw-o2r"/>
+                                    <constraint firstItem="by2-Wv-Nq2" firstAttribute="top" secondItem="lmr-is-Wqr" secondAttribute="bottom" constant="7" id="wue-C9-HtE"/>
                                     <constraint firstAttribute="height" constant="75" id="zgm-mr-2cT"/>
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xnY-UM-JHl">
                                 <rect key="frame" x="0.0" y="139" width="600" height="461"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CellID" id="yQl-nn-K69">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yQl-nn-K69" id="oCu-z8-DKP">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="IxC-aY-k4c"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="y9K-NI-fqh"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
